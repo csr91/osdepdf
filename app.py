@@ -27,6 +27,7 @@ def extraer_y_generar_csv(file_stream):
                     columnas = texto_limpio.split(";")[:6]  
                     
                     if len(columnas) == 6:
+                        columnas[0] = "S" + columnas[0]  # Agregar "S" al inicio del valor en la primera columna
                         datos.append(columnas)
 
     # Convertimos los datos extraídos en un DataFrame
